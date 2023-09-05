@@ -1,0 +1,188 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body
+{
+    color: #ededed;
+}
+.header
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo
+{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: sldryt 1s ease forwards;
+}
+.navbar a
+{
+    display: inline-block;
+    font-size: 22px;
+    color: rgba(13, 226, 241, 0.997);
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 35px;
+    transition: .5s ease forwards;
+    opacity: 0;
+    animation: sldtop ease 1s forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+.navbar a:hover
+{
+    color: rgb(2, 9, 66);
+
+}
+.home
+{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(nv.avif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+}
+.home-cnt
+{
+    max-width: 600px;
+    font-weight: 700;
+}
+.home-cnt h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: sldbot ease 1s forwards;
+    animation-delay: .7s;
+}
+.home-cnt h3:nth-last-of-type(2)
+{
+    margin-bottom: 30px;
+    animation: sldtop ease 1s forwards;
+    animation-delay: .7s;
+}
+.home-cnt h1
+{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: sldryt 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-cnt p
+{
+    font-size: 20px;
+    opacity: 0;
+    animation: sldlft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-sci a
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid  rgba(13, 226, 241, 0.997);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgba(13, 226, 241, 0.997);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease forwards;
+    opacity: 0;
+    animation: sldryt ease 1s forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+.home-sci a:hover
+{
+    background: rgba(13, 226, 241, 0.997);
+    color: rgb(2, 9, 66);
+    box-shadow: 0px 0px 15px rgba(13, 226, 241, 0.997);
+    transition: background ;
+}
+.btn-box
+{
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgba(13, 226, 241, 0.997);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(2, 9, 66);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn-box:hover
+{
+    box-shadow: 0 0 5px rgba(13, 226, 241, 0.997),
+    0 0 12px rgba(13, 226, 241, 0.997),
+    0 0 25px rgba(13, 226, 241, 0.997),
+    0 0 50px rgba(13, 226, 241, 0.997),
+    0 0 75px rgba(13, 226, 241, 0.997);
+}
+@keyframes sldryt 
+{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes sldtop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes sldbot {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes sldlft 
+{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
